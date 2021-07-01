@@ -1,6 +1,5 @@
 package dto;
 
-import com.tiagozinidev.bookstoremanager.entity.Author;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -32,7 +31,8 @@ public class BookDTO {
     @NotNull
     private Integer chapters;
 
-    @Pattern(regexp = "[0-9]-[0-9]{3}-[0-9]{5}-[0-9]")
+    @Pattern(regexp = "[0-9]-[0-9]{3}-[0-9]{5}-[0-9]",
+            message="Wrong patter of ISBN")
     @NotBlank
     @Size(max=100)
     private String isbn;
