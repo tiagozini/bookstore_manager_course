@@ -1,7 +1,5 @@
 package com.tiagozinidev.bookstoremanager.entity;
 
-import ch.qos.logback.classic.db.names.ColumnName;
-import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
