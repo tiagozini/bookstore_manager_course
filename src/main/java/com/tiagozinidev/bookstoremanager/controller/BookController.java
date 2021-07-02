@@ -1,6 +1,7 @@
 package com.tiagozinidev.bookstoremanager.controller;
 
 import com.tiagozinidev.bookstoremanager.entity.Book;
+import com.tiagozinidev.bookstoremanager.exception.BookNotFoundException;
 import com.tiagozinidev.bookstoremanager.repository.BookRepository;
 import com.tiagozinidev.bookstoremanager.service.BookService;
 import dto.BookDTO;
@@ -28,7 +29,7 @@ public class BookController {
     }
 
     @GetMapping("/{id}")
-    public BookDTO findById(@PathVariable Long id) {
+    public BookDTO findById(@PathVariable Long id) throws BookNotFoundException {
         return bookService.findById(id);
     }
 
